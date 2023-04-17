@@ -123,6 +123,7 @@ class SqliteCheckpointStore(CheckpointStore):
                 checkpoint["offset"],
             ),
         )
+        self.conn.commit()
 
     async def list_checkpoints(
         self,
